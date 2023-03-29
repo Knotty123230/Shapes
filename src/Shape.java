@@ -1,14 +1,10 @@
- abstract class Shape implements  ShapeName{
+ abstract class Shape{
 
     public abstract Shapes getNameShape();
 
 
 }
-interface ShapeName{
 
-
-    public  Shapes getNameShape();
-}
 
 enum Shapes{
     Triangle,
@@ -17,36 +13,36 @@ enum Shapes{
     Rectangle,
     Pentagon
 }
-class Triangle extends Shape implements  ShapeName{
+class Triangle extends Shape {
 
 
-
-    public  Shapes getNameShape() {
+    @Override
+    public Shapes getNameShape() {
         return Shapes.Triangle;
     }
 }
-class Quad extends Shape implements ShapeName{
+class Quad extends Shape {
 
     @Override
     public Shapes getNameShape() {
         return Shapes.Quad;
     }
 }
-class Circle extends Shape implements ShapeName{
+class Circle extends Shape {
 
     @Override
     public Shapes getNameShape() {
         return Shapes.Circle;
     }
 }
-class Rectangle extends Shape implements ShapeName{
+class Rectangle extends Shape {
 
     @Override
     public Shapes getNameShape() {
         return Shapes.Rectangle;
     }
 }
-class Pentagon extends Shape implements  ShapeName{
+class Pentagon extends Shape {
 
     @Override
     public Shapes getNameShape() {
@@ -71,7 +67,7 @@ class Main{
         printName.printNameFigure(pentagon);
         printName.printNameFigure(rectangle);
         printName.printNameFigure(circle);
-        printName.printNameFigure(circle);
+        printName.printNameFigure(quad);
         printName.printNameFigure(triangle);
     }
 }
